@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+'''0. Start a script '''
+
 import sys
 from os.path import exists
 
