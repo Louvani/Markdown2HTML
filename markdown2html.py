@@ -14,8 +14,8 @@ def read_file(filename=""):
         return cp_line
 
 def write_file(filename="", cp_line=""):
-    """ function that writes a string to a text file (UTF8)
-    and returns the number of characters written"""
+    ''' function that writes a string to a text file (UTF8)
+    and returns the number of characters written'''
     with open(filename, mode='w', encoding='utf-8') as f:
         for line in cp_line:
             f.write(line)
@@ -27,6 +27,9 @@ def headings(line, cp_line):
     index = line.find('\n')
     line = line[:index] + '</h%s>'%(level) + line[index:]
     cp_line.append(line)
+
+def unordered(line, cp_line):
+    ''' parsing Unordered listing syntax for generating HTML '''
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
